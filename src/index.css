@@ -1,0 +1,226 @@
+:root {
+  --color-light: #fff;
+  --color-dark: #000;
+  --light-bg-color: #f2f2f2;
+  --dark-bg-color: #383838;
+  --light-primary: #646cff;
+  --primary: #535bf2;
+  --dark-primary: #22496c;
+  --secondary-light: #d03e3e;
+  --secondary-color: #c33535;
+  --text-color: #4e4e4e;
+  --text-light-color: #dedddd;
+  --pd-1: 2rem;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  /* color: #747bff; */
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 10px;
+}
+.container {
+  background-color: var(--light-bg-color);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container--dark {
+  background-color: var(--color-dark);
+}
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  border-radius: 1rem;
+  padding: 2rem 4rem;
+  width: 56%;
+  min-height: fit-content;
+  background-color: var(--color-light);
+  box-shadow: 0 0 1.3rem 0.15rem #0001;
+}
+.app-wrapper--dark {
+  background-color: var(--dark-bg-color);
+}
+.header {
+  margin-bottom: 2rem;
+}
+.text__title {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: var(--text-color);
+}
+.text__subtitle {
+  font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--text-color);
+  text-align: center;
+}
+.text-dark {
+  color: var(--light-bg-color);
+}
+
+.btn {
+  padding: 0.8rem 1.8rem;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--light-primary);
+  border: 1px solid transparent;
+  color: var(--light-bg-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.btn:hover {
+  border-color: var(--light-primary);
+  background-color: transparent;
+  color: var(--light-primary);
+}
+.btn__add-task {
+  margin: 1rem 0;
+  width: 100%;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.input {
+  padding: 0.7rem;
+  font-size: 2rem;
+  border: 1px solid var(--text-color);
+  outline: none;
+  background-color: transparent;
+}
+.input:focus {
+  border: 1px solid var(--text-color);
+  outline: none;
+  color: var(--text-color);
+}
+.input__add-task {
+  width: 100%;
+}
+.rowBtn {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.btn__row-btn {
+  width: 100%;
+  background-color: transparent;
+  color: var(--light-primary);
+  border: 0.1rem solid var(--light-primary);
+}
+.btn__row-btn:hover {
+  background-color: var(--light-primary);
+  color: var(--light-bg-color);
+}
+.section {
+  width: 100%;
+  padding-top: 3rem;
+}
+.list__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.list--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text-clr {
+  color: var(--secondary-light);
+  font-size: 2rem;
+  cursor: pointer;
+}
+.item-row--1 {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+}
+.task-check {
+  margin-right: 2rem;
+  font-size: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1rem solid red;
+
+  /*
+  border-radius: 50rem;
+  color: red;
+  color: var(--light-primary);
+  border: 0.15em solid red; 
+  */
+}
+.task-label {
+  text-transform: capitalize;
+  font-size: 2rem;
+  width: 100%;
+  text-align: left;
+  color: var(--light-primary);
+}
+.item-row--2 {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.btn__edit {
+  width: 100%;
+  background-color: transparent;
+  color: var(--light-primary);
+  border: 0.1rem solid var(--light-primary);
+}
+.btn__edit:hover {
+  background-color: var(--light-primary);
+  color: var(--light-bg-color);
+}
+.btn__del {
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--light-bg-color);
+  border: 0.1rem solid transparent;
+}
+.btn__del:hover {
+  border: 0.1rem solid transparent;
+  background-color: var(--secondary-light);
+  color: var(--light-bg-color);
+}
+.item-row--3 {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+.btn__save {
+  width: 100%;
+  background-color: transparent;
+  color: var(--light-primary);
+  border: 0.1rem solid var(--light-primary);
+}
+.btn__save:hover {
+  background-color: var(--light-primary);
+  color: var(--light-bg-color);
+}
+.btn__clc {
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--light-bg-color);
+  border: 0.1rem solid transparent;
+}
+.btn__clc:hover {
+  border: 0.1rem solid transparent;
+  background-color: var(--secondary-light);
+  color: var(--light-bg-color);
+}
